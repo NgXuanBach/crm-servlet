@@ -8,10 +8,10 @@ $(document).ready(function () {
             url: "http://localhost:8080/demoservlet/profile/edit?jobId=" + id,
         });
         request.done(function () {
-            alert("Cập nhật trạng thái thành công")
+            bootbox.alert("Cập nhật trạng thái thành công")
         });
         request.fail(function () {
-            alert("Cập nhật trạng thái không thành công")
+            bootbox.alert("Cập nhật trạng thái không thành công")
         });
     })
 })

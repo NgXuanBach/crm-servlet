@@ -8,7 +8,7 @@ $(document).ready(function () {
             url: "http://localhost:8080/demoservlet/role/delete?roleId=" + id,
         }).done(function (result) {
             This.closest("tr").remove();
-            console.log("Ket qua ", result)
+            bootbox.alert("Xoá thành công !")
         });
     })
 })

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" type="image/png" sizes="16x16" href="../plugins/images/favicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="plugins/images/favicon.png">
     <title>Trang chủ</title>
     <!-- Bootstrap Core CSS -->
     <link href="bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -95,6 +95,11 @@
                     <a href="<c:url value="/home"/> " class="waves-effect"><i class="fa fa-clock-o fa-fw"
                                                                               aria-hidden="true"></i><span
                             class="hide-menu">Trang chủ</span></a>
+                </li>
+                <li>
+                    <a href="<c:url value="/profile"/> " class="waves-effect"><i class="fa fa-table fa-fw"
+                                                                                 aria-hidden="true"></i><span
+                            class="hide-menu">Công việc cá nhân</span></a>
                 </li>
                 <li>
                     <a href="<c:url value="/user"/>" class="waves-effect"><i class="fa fa-user fa-fw"

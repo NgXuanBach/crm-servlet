@@ -99,6 +99,11 @@
                             class="hide-menu">Trang chủ</span></a>
                 </li>
                 <li>
+                    <a href="<c:url value="/profile"/> " class="waves-effect"><i class="fa fa-table fa-fw"
+                                                                                 aria-hidden="true"></i><span
+                            class="hide-menu">Công việc cá nhân</span></a>
+                </li>
+                <li>
                     <a href="<c:url value="/user"/>" class="waves-effect"><i class="fa fa-user fa-fw"
                                                                              aria-hidden="true"></i><span
                             class="hide-menu">Thành viên</span></a>
@@ -137,7 +142,8 @@
                 <div class="col-md-8 col-xs-12">
                     <div class="white-box">
                         <h2>${msg}</h2>
-                        <form action="<c:url value="/user/edit?userId=${user.getId()}"/>" method="post" class="form-horizontal form-material">
+                        <form action="<c:url value="/user/edit?userId=${user.getId()}"/>" method="post"
+                              class="form-horizontal form-material">
                             <div class="form-group">
                                 <label class="col-md-12">Full Name</label>
                                 <div class="col-md-12">

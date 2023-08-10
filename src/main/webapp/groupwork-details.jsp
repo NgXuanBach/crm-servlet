@@ -104,6 +104,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             class="hide-menu">Trang chủ</span></a>
                 </li>
                 <li>
+                    <a href="<c:url value="/profile"/> " class="waves-effect"><i class="fa fa-table fa-fw"
+                                                                                 aria-hidden="true"></i><span
+                            class="hide-menu">Công việc cá nhân</span></a>
+                </li>
+                <li>
                     <a href="<c:url value="/user"/>" class="waves-effect"><i class="fa fa-user fa-fw"
                                                                              aria-hidden="true"></i><span
                             class="hide-menu">Thành viên</span></a>

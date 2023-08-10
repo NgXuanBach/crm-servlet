@@ -7,7 +7,7 @@ $(document).ready(function () {
             url: "http://localhost:8080/demoservlet/job/delete?jobId=" + id,
         }).done(function (result) {
             This.closest("tr").remove();
-            console.log("Ket qua ", result)
+            bootbox.alert("Xoá thành công !")
         });
     })
 })

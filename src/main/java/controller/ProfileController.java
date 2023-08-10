@@ -17,7 +17,6 @@ import java.util.List;
 
 public class ProfileController extends HttpServlet {
     private ProfileService profileService = new ProfileService();
-
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String content = req.getServletPath();
@@ -30,7 +29,6 @@ public class ProfileController extends HttpServlet {
                 break;
         }
     }
-
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String content = req.getServletPath();
@@ -43,7 +41,6 @@ public class ProfileController extends HttpServlet {
                 break;
         }
     }
-
     private void getJobById(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         int jobId = Integer.parseInt(req.getParameter("jobId"));
         String method = req.getMethod();
@@ -59,7 +56,6 @@ public class ProfileController extends HttpServlet {
         req.setAttribute("job", jobModel);
         req.getRequestDispatcher("/profile-edit.jsp").forward(req, resp);
     }
-
     private void getJobByUserId(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         HttpSession session = req.getSession();
         UserModel userModel = (UserModel) session.getAttribute("user");

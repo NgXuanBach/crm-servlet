@@ -94,6 +94,11 @@
                             class="hide-menu">Trang chủ</span></a>
                 </li>
                 <li>
+                    <a href="<c:url value="/profile"/> " class="waves-effect"><i class="fa fa-table fa-fw"
+                                                                                 aria-hidden="true"></i><span
+                            class="hide-menu">Công việc cá nhân</span></a>
+                </li>
+                <li>
                     <a href="<c:url value="/user"/>" class="waves-effect"><i class="fa fa-user fa-fw"
                                                                              aria-hidden="true"></i><span
                             class="hide-menu">Thành viên</span></a>
@@ -184,6 +189,7 @@
 <!-- Custom Theme JavaScript -->
 <script src="js/custom.min.js"></script>
 <script src="<c:url value="/js/role-table.js"/> "></script>
+<script src="<c:url value="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/6.0.0/bootbox.js"/> "></script>
 <script>
     $(document).ready(function () {
         $('#example').DataTable();

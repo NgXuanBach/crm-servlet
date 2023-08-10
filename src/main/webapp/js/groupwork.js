@@ -8,6 +8,7 @@ $(document).ready(function () {
             url: "http://localhost:8080/demoservlet/project/delete?projectId=" + id,
         }).done(function (result) {
             This.closest("tr").remove();
+            bootbox.alert("Xoá thành công !")
         });
     })
 })
