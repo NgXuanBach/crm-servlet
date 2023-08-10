@@ -12,4 +12,4 @@ The CRM system is only an employee work management solution for the business.
 # STEPS TO PERFORM THE PROJECT CRM_APP
 1. First, ```git clone https://github.com/NgXuanBach/crm-servlet.git``` or click download ```ZIP```.
 2. Then, getting database source code for this project is ```crm_app.sql``` in our project ```crm-servlet``` to create repository into ```MySQL``` Docker.
-3. Then, open crm-servlet project with any IDE to run.
+3. Then, open `crm-servlet` project with any `IDE` to run.
