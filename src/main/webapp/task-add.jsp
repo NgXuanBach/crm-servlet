@@ -10,8 +10,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" type="image/png" sizes="16x16" href="plugins/images/favicon.png">
-    <title>Pixel Admin</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="<c:url value="/plugins/images/favicon.png"/>">
+    <title>Thêm công việc</title>
     <!-- Bootstrap Core CSS -->
     <link href="<c:url value="/bootstrap/dist/css/bootstrap.min.css"/> " rel="stylesheet">
     <!-- Menu CSS -->
@@ -211,5 +211,4 @@
 <!-- Custom Theme JavaScript -->
 <script src="<c:url value="/js/custom.min.js"/> "></script>
 </body>
-
 </html>

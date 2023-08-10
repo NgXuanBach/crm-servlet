@@ -23,4 +23,12 @@ public class RoleService {
     public boolean insertRole(String name, String description) {
         return roleRepository.insertRole(name, description);
     }
+
+    public boolean updateRole(int id, String name, String description) {
+        return roleRepository.updateRole(id, name, description);
+    }
+
+    public RoleModel getRoleById(int id) {
+        return roleRepository.findById(id);
+    }
 }

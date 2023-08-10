@@ -10,8 +10,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" type="image/png" sizes="16x16" href="plugins/images/favicon.png">
-    <title>Pixel Admin</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="<c:url value="/plugins/images/favicon.png"/>">
+    <title>Cập nhật trạng thái</title>
     <!-- Bootstrap Core CSS -->
     <link href=
           <c:url value="/bootstrap/dist/css/bootstrap.min.css"/> rel="stylesheet">
@@ -97,7 +97,7 @@
                     <a href="<c:url value="/home"/> " class="waves-effect"><i class="fa fa-clock-o fa-fw"
                                                                               aria-hidden="true"></i><span
                             class="hide-menu">Trang chủ</span></a>
-                </li
+                </li>
                 <li>
                     <a href="<c:url value="/profile"/> " class="waves-effect"><i class="fa fa-table fa-fw"
                                                                                  aria-hidden="true"></i><span

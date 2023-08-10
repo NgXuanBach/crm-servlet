@@ -55,7 +55,7 @@ public class UserController extends HttpServlet {
         req.getRequestDispatcher("user-table.jsp").forward(req, resp);
     }
 
-    private void    addUser(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    private void addUser(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String method = req.getMethod();
         List<RoleModel> roleModelList = userService.getAllRole();
         if (method.equalsIgnoreCase("post")) {

@@ -23,7 +23,7 @@ public class UserService {
     }
 
     public String getRoleById(int id) {
-        return roleRepository.findById(id).get(0).getDescription();
+        return roleRepository.findById(id).getDescription();
     }
 
     public boolean deleteUser(int id) {

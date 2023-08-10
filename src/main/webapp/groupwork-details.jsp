@@ -16,8 +16,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <meta name="description" content="">
     <meta name="author" content="">
     <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="plugins/images/favicon.png">
-    <title>Pixel Admin</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="<c:url value="/plugins/images/favicon.png"/> ">
+    <title>Chi tiết dự án</title>
     <!-- Bootstrap Core CSS -->
     <link href="<c:url value="/bootstrap/dist/css/bootstrap.min.css"/> " rel="stylesheet">
     <!-- Menu CSS -->

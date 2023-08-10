@@ -42,9 +42,10 @@ public class RoleRepository {
         }
         return roleModelList;
     }
-    public List<RoleModel> findById(int id) {
+
+    public RoleModel findById(int id) {
         Connection connection = null;
-        List<RoleModel> roleModelList = new ArrayList<>();
+        RoleModel roleModel = new RoleModel();
         try {
             String sql = "SELECT * FROM roles WHERE id = ?";
             //mở kết nối
@@ -53,27 +54,24 @@ public class RoleRepository {
             statement.setInt(1, id);
             ResultSet resultSet = statement.executeQuery();
             while (resultSet.next()) {
-                //Duyệt từng dòng dữ liệu
-                RoleModel roleModel = new RoleModel();
-                //Lấy giá trị của cột id
                 roleModel.setId(resultSet.getInt("id"));
                 roleModel.setName(resultSet.getString("name"));
                 roleModel.setDescription(resultSet.getString("description"));
-                roleModelList.add(roleModel);
             }
         } catch (Exception e) {
-            System.out.println("Error findAll in Role : " + e.getMessage());
+            System.out.println("Error find by id in Role : " + e.getMessage());
         } finally {
             if (connection != null) {
                 try {
                     connection.close();
                 } catch (Exception e) {
-                    System.out.println("Lỗi đóng kết nối findAll in Role:  " + e.getMessage());
+                    System.out.println("Lỗi đóng kết nối find by id in Role:  " + e.getMessage());
                 }
             }
         }
-        return roleModelList;
+        return roleModel;
     }
+
     public List<RoleModel> findByName(String name) {
         Connection connection = null;
         List<RoleModel> roleModelList = new ArrayList<>();
@@ -106,6 +104,7 @@ public class RoleRepository {
         }
         return roleModelList;
     }
+
     public boolean deleteRoleById(int id) {
         Connection connection = null;
         boolean isSuccess = false;
@@ -147,6 +146,31 @@ public class RoleRepository {
                     connection.close();
                 } catch (Exception e) {
                     System.out.println("Lỗi đóng kết nối insertRole:  " + e.getMessage());
+                }
+            }
+        }
+        return isSuccess;
+    }
+
+    public boolean updateRole(int id, String name, String description) {
+        Connection connection = null;
+        boolean isSuccess = false;
+        try {
+            connection = MysqlConfig.getConnection();
+            String sql = "UPDATE roles SET name = ?, description = ? WHERE id = ?;";
+            PreparedStatement statement = connection.prepareStatement(sql);
+            statement.setString(1, name);
+            statement.setString(2, description);
+            statement.setInt(3, id);
+            isSuccess = statement.executeUpdate() > 0;
+        } catch (Exception e) {
+            System.out.println("Lỗi thực thi query updateRole:  " + e.getMessage());
+        } finally {
+            if (connection != null) {
+                try {
+                    connection.close();
+                } catch (Exception e) {
+                    System.out.println("Lỗi đóng kết nối updateRole:  " + e.getMessage());
                 }
             }
         }

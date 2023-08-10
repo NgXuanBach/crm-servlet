@@ -1,5 +1,4 @@
 $(document).ready(function () {
-    //lắng nghe sự kiện click cho thẻ có id là btn-delete-user
     $(".btn-delete-role").click(function () {
         var id = $(this).attr("role-id")
         var This = $(this)

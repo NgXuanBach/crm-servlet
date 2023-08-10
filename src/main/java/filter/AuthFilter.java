@@ -41,7 +41,6 @@ public class AuthFilter implements Filter {
                 filterChain.doFilter(servletRequest, servletResponse);
             }
         }
-
     }
 
     public void handleRequest(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws ServletException, IOException {
@@ -49,7 +48,7 @@ public class AuthFilter implements Filter {
         HttpServletResponse resp = (HttpServletResponse) servletResponse;
         String reqPath = req.getServletPath();
         UserModel user = (UserModel) req.getSession().getAttribute("user");
-        String roleName = roleRepository.findById(user.getRoleId()).get(0).getName();
+        String roleName = roleRepository.findById(user.getRoleId()).getName();
         switch (reqPath) {
             case "/user":
                 if (roleName.equalsIgnoreCase("role_admin") || roleName.equalsIgnoreCase("role_manager"))

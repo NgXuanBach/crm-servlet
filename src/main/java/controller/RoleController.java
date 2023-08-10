@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 
-@WebServlet(name = "roleController", urlPatterns = {"/role", "/role/delete", "/role/add"})
+@WebServlet(name = "roleController", urlPatterns = {"/role", "/role/delete", "/role/add", "/role/update"})
 public class RoleController extends HttpServlet {
     private RoleService roleService = new RoleService();
 
@@ -28,6 +28,9 @@ public class RoleController extends HttpServlet {
             case "/role/add":
                 addRole(req, resp);
                 break;
+            case "/role/update":
+                editRole(req, resp);
+                break;
         }
     }
 
@@ -37,6 +40,9 @@ public class RoleController extends HttpServlet {
         switch (path) {
             case "/role/add":
                 addRole(req, resp);
+                break;
+            case "/role/update":
+                editRole(req, resp);
                 break;
         }
     }
@@ -76,5 +82,28 @@ public class RoleController extends HttpServlet {
             req.setAttribute("msg", msg);
         }
         req.getRequestDispatcher("/role-add.jsp").forward(req, resp);
+    }
+
+    private void editRole(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        String method = req.getMethod();
+        int id = Integer.parseInt(req.getParameter("roleId"));
+        if (method.equalsIgnoreCase("post")) {
+            RoleModel roleModelFirst = roleService.getRoleById(id);
+            String name = req.getParameter("name");
+            String description = req.getParameter("description");
+            String msg = "";
+            if (name.equalsIgnoreCase(roleModelFirst.getName()) && description.equalsIgnoreCase(roleModelFirst.getDescription())) {
+                msg = "Bạn chưa chỉnh sửa ! Vui lòng chỉnh sửa để cập nhật !";
+            } else {
+                roleService.updateRole(id, name, description);
+                msg = "Cập nhật thành công :)";
+            }
+            req.setAttribute("msg", msg);
+        }
+        RoleModel roleModel = roleService.getRoleById(id);
+        req.setAttribute("roleName", roleModel.getName());
+        req.setAttribute("roleDesc", roleModel.getDescription());
+        req.setAttribute("roleId", id);
+        req.getRequestDispatcher("/role-edit.jsp").forward(req, resp);
     }
 }
