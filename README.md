@@ -7,7 +7,7 @@ The CRM system is only an employee work management solution for the business.
 * [Jquery](https://www.tutorialspoint.com/jquery/index.htm)
 * [Bootstrap](https://getbootstrap.com/docs/5.0/getting-started/introduction/)
 * [MySQL](https://www.tutorialspoint.com/mysql/index.htm)
-* (Docker)(https://www.tutorialspoint.com/docker/index.htm)
+* [Docker](https://www.tutorialspoint.com/docker/index.htm)
 * ....
 # STEPS TO PERFORM THE PROJECT CRM_APP
 1. First, ```git clone https://github.com/NgXuanBach/crm-servlet.git``` or click download ```ZIP```.
