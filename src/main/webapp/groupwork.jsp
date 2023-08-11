@@ -159,7 +159,7 @@
                                         <td>${item.getStartDate()}</td>
                                         <td>${item.getEndDate()}</td>
                                         <td>
-<%--                                            <a href="#" class="btn btn-sm btn-primary">Sửa</a>--%>
+                                                <%--                                            <a href="#" class="btn btn-sm btn-primary">Sửa</a>--%>
                                             <a href="#" project-id="${item.getId()}"
                                                class="btn btn-sm btn-danger btn-delete-project">Xóa</a>
                                             <a href="<c:url value="/project/details?projectId=${item.getId()}"/>"
@@ -194,7 +194,7 @@
 <script src="<c:url value="js/waves.js"/> "></script>
 <!-- Custom Theme JavaScript -->
 <script src="<c:url value="js/custom.min.js"/> "></script>
-<script src="<c:url value="js/groupwork.js"/> "></script>
+<script src="<c:url value="/js/groupwork.js"/> "></script>
 <script src="<c:url value="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/6.0.0/bootbox.js"/> "></script>
 <script>
     $(document).ready(function () {

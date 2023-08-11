@@ -199,6 +199,7 @@
 <!-- Custom Theme JavaScript -->
 <script src="js/custom.min.js"></script>
 <script src="<c:url value="/js/task.js"/> "></script>
+<script src="<c:url value="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/6.0.0/bootbox.js"/> "></script>
 <script>
     $(document).ready(function () {
         $('#example').DataTable();
